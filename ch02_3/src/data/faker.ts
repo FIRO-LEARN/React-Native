@@ -1,8 +1,8 @@
-import faker from 'faker'
+import {faker} from '@faker-js/faker'
 import * as U from './util'
 
 export const randomId = (): string => faker.datatype.uuid()
-export const randomName = (): string => faker.name.findName()
+export const randomName = (): string => faker.name.firstName()
 export const randomEmail = (): string => faker.internet.email()
 export const randomAvatarUrl = (name?: string): string => U.avatarUriByName(name ?? randomName())
 export const randomDate = (): Date => faker.date.recent()
